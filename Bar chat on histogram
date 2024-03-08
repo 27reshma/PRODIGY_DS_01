@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+
+# Sample data of ages
+ages = [20, 25, 30, 35, 40, 45, 50, 55, 60, 65]
+
+# Count the frequency of each age
+age_counts = {}
+for age in ages:
+    age_counts[age] = age_counts.get(age, 0) + 1
+
+# Create lists of ages and their corresponding frequencies
+age_labels = list(age_counts.keys())
+frequency = list(age_counts.values())
+
+# Create the bar chart
+plt.bar(age_labels, frequency, color='skyblue')
+
+# Add labels and title
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.title('Distribution of Ages in a Population')
+
+# Display the bar chart
+plt.show()
